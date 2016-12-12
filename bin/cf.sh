@@ -26,5 +26,6 @@ function validate_cf(){
 }
 
 validate_cf
+
 cf push -b https://github.com/cloudfoundry/java-buildpack.git -p target/*jar cdlive
 --hostname cdlive-staging
