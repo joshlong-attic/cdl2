@@ -19,10 +19,14 @@ function validate_cf(){
 
     export PATH=$PATH:$HOME/bin
 
-    cf api https://api.run.pivotal.io
-    cf auth $CF_USER "$CF_PASSWORD" && \
-    cf target -o $CF_ORG -s $CF_SPACE && \
-    cf apps
+    echo $CF_API
+    echo $CF_PASSWORD
+    echo $CF_ORG
+    echo $CF_USER
+    echo $CF_SPACE
+
+    cf api $CF_API
+    cf auth $CF_USER "$CF_PASSWORD" && cf target -o $CF_ORG -s $CF_SPACE &&  cf apps
 }
 
 validate_cf
