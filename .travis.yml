@@ -1,5 +1,5 @@
 language: java
-script: ./mvnw package -Dbuild.number=${TRAVIS_BUILD_NUMBER}
+script: ./mvnw package -Dbuild.number=${TRAVIS_BUILD_NUMBER} && ./bin/cf.sh
 jdk: oraclejdk8
 install: echo installing
 env:
