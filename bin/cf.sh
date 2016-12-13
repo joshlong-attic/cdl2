@@ -16,15 +16,12 @@ function install_cf(){
 
 function validate_cf(){
 
-
-
     cf  -v || install_cf
     export PATH=$PATH:$HOME/bin
 
     cf api $CF_API
     cf auth $CF_USER "$CF_PASSWORD" && cf target -o $CF_ORG -s $CF_SPACE &&  cf apps
 }
-
 
 validate_cf
 BP=https://github.com/cloudfoundry/java-buildpack.git
