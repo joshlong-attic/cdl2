@@ -25,12 +25,6 @@ function validate_cf(){
     cf auth $CF_USER "$CF_PASSWORD" && cf target -o $CF_ORG -s $CF_SPACE &&  cf apps
 }
 
-echo $CF_API
-echo $CF_PASSWORD
-echo $CF_ORG
-echo $CF_USER
-echo $CF_SPACE
-
 
 validate_cf
 

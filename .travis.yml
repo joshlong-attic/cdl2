@@ -4,7 +4,7 @@ jdk: oraclejdk8
 install: echo installing
 env:
   global:
-  - ARTIFACTORY_USER=admin
+  - ARTIFACTORY_USERNAME=admin
   - CF_API=http://api.run.pivotal.io
   - CF_SPACE=joshlong
   - CF_ORG=platform-eng
