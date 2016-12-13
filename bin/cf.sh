@@ -5,12 +5,7 @@ CF_PASSWORD=${2:-$CF_PASSWORD}
 CF_ORG=${3:-$CF_ORG}
 CF_SPACE=${4:-$CF_SPACE}
 
-echo "-----------"
-echo $CF_PASSWORD
-echo $CF_SPACE
-echo $CF_ORG
-echo $CF_USER
-echo "-----------"
+
 
 function install_cf(){
     mkdir -p $HOME/bin
@@ -32,7 +27,5 @@ function validate_cf(){
 
 
 validate_cf
-
 BP=https://github.com/cloudfoundry/java-buildpack.git
-
 cf push -b $BP -p target/*jar --hostname cdlive-staging cdlive
